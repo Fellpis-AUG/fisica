@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Circuito Elétrico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fisica.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Circuito Elétrico</h1>
+        <form id="circuit-form">
+            <div class="section">
+                <label for="tipoAssociacao">Tipo de associação de resistores:</label>
+                <select id="tipoAssociacao">
+                    <option value="serie">Série</option>
+                    <option value="paralelo">Paralelo</option>
+                </select>
+            </div>
+
+            <div class="section">
+                <label for="numGeradores">Número de Geradores:</label>
+                <input type="number" id="numGeradores" min="1" required>
+            </div>
+
+            <div class="section" id="geradores">
+                <!-- Geradores serão adicionados dinamicamente aqui -->
+            </div>
+
+            <div class="section">
+                <label for="numResistores">Número de Resistores:</label>
+                <input type="number" id="numResistores" min="1" required>
+            </div>
+
+            <div class="section" id="resistores">
+                <!-- Resistores serão adicionados dinamicamente aqui -->
+            </div>
+
+            <button type="button" class="btn-calcular" onclick="calcular()">Calcular</button>
+        </form>
+
+        <div id="resultados" class="resultados">
+            <!-- Resultados do cálculo serão exibidos aqui -->
+        </div>
+    </div>
+
+    <script src="fisica.js"></script>
+</body>
+</html>
